@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "card_name": "VISA",
+        "card_user": "MAKY MADI",
+        "card_code": "9432",
+        "card_balance": "150566330",
+        "card_color": "0xFF0D937E",
+        "card_route": "card",
+        "card_icon": "icons8-visa.png"
+    },
+    {
+        "id": 2,
+        "card_name": "MASTERCARD",
+        "card_user": "MAKY MADI",
+        "card_code": "5325",
+        "card_balance": "50256464",
+        "card_color": "0xFFFF0000",
+        "card_route": "card",
+        "card_icon": "icons8-mastercard.png"
+    }
+]
