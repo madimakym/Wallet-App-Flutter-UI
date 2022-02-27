@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_app/pages/card/card_success_page.dart';
 import 'package:wallet_app/utils/appcolors.dart';
 import 'package:wallet_app/utils/validations.dart';
 import 'package:wallet_app/widgets/custom_button.dart';
@@ -25,9 +26,9 @@ class _CardAddPageState extends State<CardAddPage> {
     final customWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: AppColors.bg,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-          backgroundColor: AppColors.white,
+          backgroundColor: AppColors.bg,
           elevation: 0,
           title: const Text(
             "CARD",
@@ -39,7 +40,7 @@ class _CardAddPageState extends State<CardAddPage> {
           children: [
             Container(
               width: double.infinity,
-              color: AppColors.white,
+              color: AppColors.bg,
               child: Column(
                 children: [
                   const SizedBox(height: 20),
@@ -118,16 +119,16 @@ class _CardAddPageState extends State<CardAddPage> {
             ),
             Container(
               width: double.infinity,
-              color: AppColors.white,
+              color: AppColors.bg,
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                    color: AppColors.bg,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50),
-                      topRight: Radius.circular(50),
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
                     )),
                 child: Form(
                   key: formKey,
@@ -190,9 +191,16 @@ class _CardAddPageState extends State<CardAddPage> {
                       const SizedBox(height: 25),
                       CustomButton(
                           title: "ADD NEW CARD",
-                          onPress: () => {},
+                          onPress: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute<void>(
+                                        builder: (BuildContext context) {
+                                          return const CardSuccessPage();
+                                        },
+                                        fullscreenDialog: true))
+                              },
                           color: AppColors.primary),
-                      // const SizedBox(height: 130),
                     ],
                   ),
                 ),

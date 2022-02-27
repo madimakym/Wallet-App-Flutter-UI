@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallet_app/pages/home/home_page.dart';
+import 'package:wallet_app/pages/transaction/transaction_page.dart';
 import 'package:wallet_app/widgets/tabbar.dart';
 
 import 'pages/card/card_page.dart';
@@ -30,6 +31,8 @@ class _AppViewState extends State<AppView> {
         switch (settings.name) {
           case "/card":
             return FadeTransitionRoute(widget: const CardPage());
+          case "/transactions":
+            return FadeTransitionRoute(widget: const TransactionPage());
           default:
             return MaterialPageRoute(builder: (_) => const HomePage());
         }

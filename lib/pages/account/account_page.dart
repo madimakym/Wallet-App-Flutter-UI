@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallet_app/utils/appcolors.dart';
 import 'package:wallet_app/utils/validations.dart';
-import 'package:wallet_app/widgets/custom_button.dart';
 import 'package:wallet_app/widgets/custom_input.dart';
 
 class AccountPage extends StatefulWidget {
@@ -28,9 +27,9 @@ class _AccountPageState extends State<AccountPage> {
     _emailCtlr.text = "makymadi@gmail.com";
     _addressCtlr.text = "Damel city";
     return Scaffold(
-      backgroundColor: AppColors.bg,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-          backgroundColor: AppColors.white,
+          backgroundColor: AppColors.bg,
           elevation: 0,
           title: const Text(
             "ACCOUNT",
@@ -42,7 +41,7 @@ class _AccountPageState extends State<AccountPage> {
           children: [
             Container(
               width: double.infinity,
-              color: AppColors.white,
+              color: AppColors.bg,
               child: Column(
                 children: [
                   const SizedBox(height: 20),
@@ -50,7 +49,7 @@ class _AccountPageState extends State<AccountPage> {
                       width: 80,
                       height: 80,
                       child: CircleAvatar(
-                          backgroundColor: AppColors.bg,
+                          backgroundColor: AppColors.white,
                           child: Icon(Icons.person,
                               color: Colors.black, size: 30.0))),
                   const SizedBox(height: 10),
@@ -107,16 +106,16 @@ class _AccountPageState extends State<AccountPage> {
             ),
             Container(
               width: double.infinity,
-              color: AppColors.white,
+              color: AppColors.bg,
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                    color: AppColors.bg,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50),
-                      topRight: Radius.circular(50),
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
                     )),
                 child: Form(
                   key: formKey,

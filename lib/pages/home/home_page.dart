@@ -43,12 +43,12 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
           top: true,
           bottom: true,
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -73,8 +73,11 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
-                SizedBox(
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: SizedBox(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
@@ -93,8 +96,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                SizedBox(
+              ),
+              const SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
@@ -104,8 +110,11 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
-                Row(
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ServiceItem(
@@ -122,38 +131,40 @@ class _HomePageState extends State<HomePage> {
                         icon: "lib/assets/img/icons8-euro_money.png")
                   ],
                 ),
-                const SizedBox(height: 30),
-                SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text("Transactions",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w500)),
-                      Text("View All",
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w600))
+              ),
+              const SizedBox(height: 30),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Transactions",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500)),
+                    InkWell(
+                        onTap: () =>
+                            Navigator.pushNamed(context, "/transactions"),
+                        child: const Icon(Icons.chevron_right_outlined)),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      for (var item in _transactions)
+                        TransactionItem(
+                            title: item['title'],
+                            subTitle: item['subtitle'],
+                            amount: item['amount'],
+                            icon: item['icon'],
+                            type: item['type']),
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        for (var item in _transactions)
-                          TransactionItem(
-                              title: item['title'],
-                              subTitle: item['subtitle'],
-                              amount: item['amount'],
-                              icon: item['icon'],
-                              type: item['type']),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           )),
     );
   }
