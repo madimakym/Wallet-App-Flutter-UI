@@ -35,6 +35,7 @@ class _TransactionPageState extends State<TransactionPage> {
       backgroundColor: AppColors.white,
       appBar: AppBar(
           backgroundColor: AppColors.white,
+          iconTheme: const IconThemeData(color: Colors.black),
           elevation: 0,
           title: const Text(
             "TRANSACTIONS",

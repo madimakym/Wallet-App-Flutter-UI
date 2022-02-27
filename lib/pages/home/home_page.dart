@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                     children: const [
                       Text("Services",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w500))
+                              fontSize: 18, fontWeight: FontWeight.w600))
                     ],
                   ),
                 ),
@@ -118,17 +118,25 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ServiceItem(
-                        title: "Wallet",
-                        icon: "lib/assets/img/icons8-wallet.png"),
+                      title: "Wallet",
+                      icon: "lib/assets/img/icons8-wallet.png",
+                      color: const Color(0xFFE3FBFF),
+                    ),
                     ServiceItem(
-                        title: "Transfer",
-                        icon: "lib/assets/img/icons8-get_cash.png"),
+                      title: "Transfer",
+                      icon: "lib/assets/img/icons8-get_cash.png",
+                      color: const Color(0xFFE3FBFF),
+                    ),
                     ServiceItem(
-                        title: "Pay Bills",
-                        icon: "lib/assets/img/icons8-cash_on_delivery.png"),
+                      title: "Pay Bills",
+                      icon: "lib/assets/img/icons8-cash_on_delivery.png",
+                      color: const Color(0xFFE3FBFF),
+                    ),
                     ServiceItem(
-                        title: "Pay",
-                        icon: "lib/assets/img/icons8-euro_money.png")
+                      title: "Pay",
+                      icon: "lib/assets/img/icons8-euro_money.png",
+                      color: const Color(0xFFE3FBFF),
+                    )
                   ],
                 ),
               ),
@@ -140,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     const Text("Transactions",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500)),
+                            fontSize: 18, fontWeight: FontWeight.w600)),
                     InkWell(
                         onTap: () =>
                             Navigator.pushNamed(context, "/transactions"),
