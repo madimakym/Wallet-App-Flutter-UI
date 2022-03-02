@@ -4,6 +4,7 @@ import 'package:wallet_app/pages/transaction/transaction_page.dart';
 import 'package:wallet_app/widgets/tabbar.dart';
 
 import 'pages/card/card_page.dart';
+import 'pages/settings/profile/profile_page.dart';
 import 'widgets/transition.dart';
 
 class App extends StatelessWidget {
@@ -33,6 +34,8 @@ class _AppViewState extends State<AppView> {
             return FadeTransitionRoute(widget: const CardPage());
           case "/transactions":
             return FadeTransitionRoute(widget: const TransactionPage());
+          case "/profile":
+            return FadeTransitionRoute(widget: const ProfilePage());
           default:
             return MaterialPageRoute(builder: (_) => const HomePage());
         }

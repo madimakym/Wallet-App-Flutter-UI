@@ -19,7 +19,7 @@ class _CardSuccessPageState extends State<CardSuccessPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-                width: 150,
+                width: 100,
                 child: Image.asset("lib/assets/img/icon-success.png")),
             const SizedBox(height: 20),
             const Text("Link Card successfully",
@@ -28,14 +28,12 @@ class _CardSuccessPageState extends State<CardSuccessPage> {
             const Text("Thanks for using services",
                 style: TextStyle(
                     color: AppColors.grey, fontWeight: FontWeight.w500)),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             CustomButton(
                 title: "BACK TO HOME",
                 onPress: () => Navigator.pop(context),
                 color: AppColors.primary),
-            const SizedBox(height: 20),
-            const Text("View wallet",
-                style: TextStyle(fontWeight: FontWeight.w600)),
+            
           ],
         ),
       ),

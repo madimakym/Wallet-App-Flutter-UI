@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wallet_app/pages/account/account_page.dart';
 import 'package:wallet_app/pages/card/card_add_page.dart';
+import 'package:wallet_app/pages/settings/settings_page.dart';
 import 'package:wallet_app/pages/transaction/transaction_page.dart';
 import 'package:wallet_app/utils/appcolors.dart';
 import '../pages/home/home_page.dart';
@@ -20,7 +20,7 @@ class _TabsPageState extends State<TabsPage> {
     const HomePage(),
     const TransactionPage(),
     const CardAddPage(),
-    const AccountPage()
+    const SettingsPage()
   ];
 
   void _onItemTapped(int index) {
@@ -73,7 +73,7 @@ class _TabsPageState extends State<TabsPage> {
             BottomNavigationBarItem(
               icon: Icon(Icons.person, color: AppColors.grey),
               activeIcon: Icon(Icons.person, color: AppColors.primary),
-              label: 'Account',
+              label: 'Settings',
             ),
           ],
           currentIndex: _selectedIndex,

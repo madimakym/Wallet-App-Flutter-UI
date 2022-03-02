@@ -3,14 +3,14 @@ import 'package:wallet_app/utils/appcolors.dart';
 import 'package:wallet_app/utils/validations.dart';
 import 'package:wallet_app/widgets/custom_input.dart';
 
-class AccountPage extends StatefulWidget {
-  const AccountPage({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
-  _AccountPageState createState() => _AccountPageState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _AccountPageState extends State<AccountPage> {
+class _ProfilePageState extends State<ProfilePage> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   Validations validations = Validations();
   late final TextEditingController _fistnameCtlr = TextEditingController();
@@ -31,8 +31,9 @@ class _AccountPageState extends State<AccountPage> {
       appBar: AppBar(
           backgroundColor: AppColors.bg,
           elevation: 0,
+          iconTheme: const IconThemeData(color: Colors.black),
           title: const Text(
-            "ACCOUNT",
+            "PROFILE",
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 18),
           )),
