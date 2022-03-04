@@ -117,8 +117,9 @@ class _SettingsPageState extends State<SettingsPage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
                                 Text("Edit profile",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500)),
                                 Icon(Icons.arrow_forward_ios_rounded,
                                     size: 16, color: Colors.black)
                               ],
@@ -137,8 +138,9 @@ class _SettingsPageState extends State<SettingsPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text("Reset password",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w500)),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500)),
                               Icon(Icons.arrow_forward_ios_rounded,
                                   size: 16, color: Colors.black)
                             ],
@@ -156,8 +158,9 @@ class _SettingsPageState extends State<SettingsPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text("Help center",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w500)),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500)),
                               Icon(Icons.arrow_forward_ios_rounded,
                                   size: 16, color: Colors.black)
                             ],
@@ -167,8 +170,9 @@ class _SettingsPageState extends State<SettingsPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text("Privacy",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w500)),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500)),
                               Icon(Icons.arrow_forward_ios_rounded,
                                   size: 16, color: Colors.black)
                             ],
@@ -178,8 +182,9 @@ class _SettingsPageState extends State<SettingsPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text("Language",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w500)),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500)),
                               Icon(Icons.arrow_forward_ios_rounded,
                                   size: 16, color: Colors.black)
                             ],
@@ -190,8 +195,9 @@ class _SettingsPageState extends State<SettingsPage> {
                               Icon(Icons.logout, size: 16, color: Colors.black),
                               SizedBox(width: 5),
                               Text("Log out",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.w500)),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500)),
                             ],
                           ),
                         ],
