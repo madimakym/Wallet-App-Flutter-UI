@@ -197,7 +197,7 @@ class _SettingsPageState extends State<SettingsPage> {
                               const SizedBox(width: 5),
                               InkWell(
                                 onTap: () =>
-                                    Navigator.pushNamed(context, "/welcome"),
+                                    Navigator.popAndPushNamed(context, "/welcome"),
                                 child: const Text("Log out",
                                     style: TextStyle(
                                         fontSize: 15,

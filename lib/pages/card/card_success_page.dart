@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wallet_app/utils/appcolors.dart';
 import 'package:wallet_app/widgets/custom_button.dart';
+import 'package:lottie/lottie.dart';
 
 class CardSuccessPage extends StatefulWidget {
   const CardSuccessPage({Key? key}) : super(key: key);
@@ -18,10 +19,11 @@ class _CardSuccessPageState extends State<CardSuccessPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-                width: 100,
-                child: Image.asset("lib/assets/img/icon-success.png")),
-            const SizedBox(height: 20),
+            // Lottie.asset(
+            //     'lib/assets/img/icon-success.json',
+            //     repeat: false),
+            Lottie.asset('lib/assets/img/icon-success.json', repeat: false),
+            const SizedBox(height: 10),
             const Text("Link Card successfully",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
             const SizedBox(height: 10),
@@ -33,7 +35,6 @@ class _CardSuccessPageState extends State<CardSuccessPage> {
                 title: "BACK TO HOME",
                 onPress: () => Navigator.pop(context),
                 color: AppColors.primary),
-            
           ],
         ),
       ),

@@ -73,7 +73,8 @@ class _SigninPageState extends State<SigninPage> {
                       controller: passwordCtlr),
                   CustomButton(
                       title: "Sign in",
-                      onPress: () => Navigator.pushNamed(context, "/home"),
+                      onPress: () =>
+                          Navigator.popAndPushNamed(context, "/home"),
                       color: AppColors.primary),
                 ],
               ),

@@ -4,7 +4,7 @@ import 'package:wallet_app/pages/auth/signup_page.dart';
 import 'package:wallet_app/pages/auth/welcome_page.dart';
 import 'package:wallet_app/pages/home/home_page.dart';
 import 'package:wallet_app/pages/transaction/transaction_page.dart';
-import 'package:wallet_app/widgets/tabbar.dart';
+import 'package:wallet_app/pages/tabbar.dart';
 
 import 'pages/card/card_page.dart';
 import 'pages/settings/profile/profile_page.dart';

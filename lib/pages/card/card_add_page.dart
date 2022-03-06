@@ -23,8 +23,6 @@ class _CardAddPageState extends State<CardAddPage> {
 
   @override
   Widget build(BuildContext context) {
-    final customWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
@@ -39,6 +37,7 @@ class _CardAddPageState extends State<CardAddPage> {
         child: Column(
           children: [
             Container(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
               width: double.infinity,
               color: AppColors.bg,
               child: Column(
@@ -50,13 +49,11 @@ class _CardAddPageState extends State<CardAddPage> {
                   const SizedBox(height: 20),
                   SizedBox(
                     child: Container(
-                      width: customWidth / 1.2,
                       height: 180,
                       padding: const EdgeInsets.all(25.0),
-                      margin: const EdgeInsets.only(right: 10),
                       decoration: BoxDecoration(
                         color: AppColors.primary,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(26),
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black38,
@@ -122,7 +119,7 @@ class _CardAddPageState extends State<CardAddPage> {
               color: AppColors.bg,
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 25.0, vertical: 25),
                 width: double.infinity,
                 decoration: const BoxDecoration(
                     color: AppColors.white,

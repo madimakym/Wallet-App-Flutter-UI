@@ -37,12 +37,12 @@ class _WelcomePageState extends State<WelcomePage> {
             SizedBox(height: customSize / 10),
             CustomButton(
               title: "Sign up",
-              onPress: () => Navigator.pushNamed(context, "/signup"),
+              onPress: () => Navigator.popAndPushNamed(context, "/signup"),
               color: AppColors.primary,
             ),
             SizedBox(height: customSize / 20),
             InkWell(
-              onTap: () => Navigator.pushNamed(context, "/signin"),
+              onTap: () => Navigator.popAndPushNamed(context, "/signin"),
               child: RichText(
                 text: const TextSpan(
                   style: TextStyle(color: Colors.black, fontSize: 13),

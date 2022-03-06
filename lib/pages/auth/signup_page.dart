@@ -84,14 +84,14 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(height: customSize / 10),
                   CustomButton(
                       title: "Create Account",
-                      onPress: () => Navigator.pushNamed(context, "/home"),
+                      onPress: () => Navigator.popAndPushNamed(context, "/home"),
                       color: AppColors.primary),
                 ],
               ),
               const SizedBox(height: 80),
               Center(
                 child: InkWell(
-                  onTap: () => Navigator.pushNamed(context, "/signin"),
+                  onTap: () => Navigator.popAndPushNamed(context, "/signin"),
                   child: RichText(
                     text: const TextSpan(
                       style: TextStyle(color: Colors.black, fontSize: 13),
