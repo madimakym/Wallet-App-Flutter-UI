@@ -44,7 +44,11 @@ class _AppViewState extends State<AppView> {
           case "/card":
             return FadeTransitionRoute(widget: const CardPage());
           case "/transactions":
-            return FadeTransitionRoute(widget: const TransactionPage());
+               return MaterialPageRoute(
+              builder: (context) {
+                return const TransactionPage();
+              },
+            );
           case "/profile":
             return FadeTransitionRoute(widget: const ProfilePage());
           default:
