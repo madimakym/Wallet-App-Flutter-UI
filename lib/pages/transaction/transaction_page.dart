@@ -38,7 +38,7 @@ class _TransactionPageState extends State<TransactionPage> {
           iconTheme: const IconThemeData(color: Colors.black),
           elevation: 0,
           title: const Text(
-            "TRANSACTIONS",
+            "Transactions",
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 18),
           )),

@@ -25,15 +25,14 @@ class CustomButton extends StatelessWidget {
           onPrimary: Colors.black,
           elevation: 4.0,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           textStyle: const TextStyle(fontSize: 15),
         ),
         child: Text(
           title,
           style: const TextStyle(
               color: AppColors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.w500),
+              fontWeight: FontWeight.w600),
         ),
       ),
     );

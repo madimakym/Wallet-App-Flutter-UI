@@ -1,13 +1,13 @@
 // ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:wallet_app/utils/appcolors.dart';
 
 class CardItem extends StatelessWidget {
   var onTap;
   String name;
   String balance;
   String cardCode;
-  String cardColors;
   String icon;
   CardItem({
     Key? key,
@@ -15,24 +15,20 @@ class CardItem extends StatelessWidget {
     required this.name,
     required this.balance,
     required this.cardCode,
-    required this.cardColors,
     required this.icon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final customWidth = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () => Navigator.pushNamed(context, '/card'),
       child: SizedBox(
         child: Container(
-          width: customWidth / 1.2,
           height: 180,
           padding: const EdgeInsets.all(25.0),
-          margin: const EdgeInsets.only(right: 10),
           decoration: BoxDecoration(
-            color: Color(int.parse(cardColors)),
-            borderRadius: BorderRadius.circular(20),
+            color: AppColors.primary,
+            borderRadius: BorderRadius.circular(26),
             boxShadow: const [
               BoxShadow(
                 color: Colors.black38,

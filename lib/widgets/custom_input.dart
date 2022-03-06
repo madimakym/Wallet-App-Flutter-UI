@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
@@ -6,11 +5,11 @@ import 'package:wallet_app/utils/appcolors.dart';
 
 // ignore: must_be_immutable
 class CustomInput extends StatelessWidget {
-  String labelText;
   TextInputType textInputType;
   bool obscureText;
   double bottomMargin;
   TextEditingController controller;
+  String labelText;
   bool readOnly;
   bool isNumeric;
   var validator;
@@ -34,40 +33,53 @@ class CustomInput extends StatelessWidget {
     TextInputType inputType =
         isNumeric ? TextInputType.number : TextInputType.text;
 
-    return Container(
-      margin: EdgeInsets.only(bottom: bottomMargin),
-      child: TextFormField(
-        focusNode: myFocusNode,
-        key: key,
-        autofocus: false,
-        obscureText: obscureText,
-        validator: validator,
-        keyboardType: inputType,
-        controller: controller,
-        style: const TextStyle(color: Colors.black, fontSize: 18.0),
-        readOnly: readOnly,
-        decoration: InputDecoration(
-          fillColor: Colors.green,
-          labelText: labelText,
-          hintStyle: const TextStyle(
-            color: Colors.black,
-            fontSize: null,
-            fontWeight: FontWeight.w400,
-            fontStyle: FontStyle.normal,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(labelText,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+        const SizedBox(height: 5),
+        Container(
+          margin: EdgeInsets.only(bottom: bottomMargin),
+          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 15),
+          height: 50,
+          decoration: BoxDecoration(
+            color: AppColors.bg,
+            borderRadius: BorderRadius.circular(30),
           ),
-          labelStyle: TextStyle(
-              color: myFocusNode.hasFocus ? Colors.blue : Colors.grey),
-          enabledBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.grey),
-          ),
-          focusedBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.primary),
-          ),
-          border: const UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
+          child: TextFormField(
+            focusNode: myFocusNode,
+            key: key,
+            autofocus: false,
+            obscureText: obscureText,
+            validator: validator,
+            keyboardType: inputType,
+            controller: controller,
+            style: const TextStyle(color: Colors.black),
+            readOnly: readOnly,
+            decoration: InputDecoration(
+              labelText: null,
+              hintStyle: const TextStyle(
+                color: Colors.black,
+                fontSize: null,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.normal,
+              ),
+              labelStyle: TextStyle(
+                  color: myFocusNode.hasFocus ? Colors.blue : Colors.grey),
+              enabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.transparent),
+              ),
+              focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.transparent),
+              ),
+              border: UnderlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

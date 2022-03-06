@@ -191,13 +191,18 @@ class _SettingsPageState extends State<SettingsPage> {
                           ),
                           const SizedBox(height: 60),
                           Row(
-                            children: const [
-                              Icon(Icons.logout, size: 16, color: Colors.black),
-                              SizedBox(width: 5),
-                              Text("Log out",
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500)),
+                            children: [
+                              const Icon(Icons.logout,
+                                  size: 16, color: Colors.black),
+                              const SizedBox(width: 5),
+                              InkWell(
+                                onTap: () =>
+                                    Navigator.pushNamed(context, "/welcome"),
+                                child: const Text("Log out",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500)),
+                              ),
                             ],
                           ),
                         ],
