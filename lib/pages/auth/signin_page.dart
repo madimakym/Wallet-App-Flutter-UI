@@ -25,6 +25,7 @@ class _SigninPageState extends State<SigninPage> {
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: AppColors.white,
+        title: const Text("Sign in", style: TextStyle(color: Colors.black)),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -36,18 +37,12 @@ class _SigninPageState extends State<SigninPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text("Sign in to",
+                  Text("Welcome to",
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
-                  Text("your account",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.w700))
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w700)),
+                  SizedBox(height: 10),
+                  Text("Enter your Email and Password for sign in"),
                 ],
-              ),
-              const SizedBox(height: 10),
-              const Text(
-                "Welcome back, you've been missed!",
-                style: TextStyle(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 60),
               Column(

@@ -12,7 +12,8 @@ class SignupPage extends StatefulWidget {
 
 class _SignupPageState extends State<SignupPage> {
   TextEditingController emailCtlr = TextEditingController();
-  TextEditingController phoneCtlr = TextEditingController();
+  TextEditingController firstnameCtlr = TextEditingController();
+  TextEditingController lastnameCtlr = TextEditingController();
   TextEditingController passwordCtlr = TextEditingController();
 
   @override
@@ -25,7 +26,7 @@ class _SignupPageState extends State<SignupPage> {
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: AppColors.white,
-        title: const Text("", style: TextStyle(color: Colors.black)),
+        title: const Text("Sign up", style: TextStyle(color: Colors.black)),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -37,23 +38,35 @@ class _SignupPageState extends State<SignupPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text("Create a new",
+                  Text("Create Account",
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
-                  Text("account",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.w700))
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w700)),
                 ],
               ),
               const SizedBox(height: 10),
-              const Text(
-                "Create an account to join eWallet",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 60),
+              const Text("Enter your Name, Email and Password \nfor sign up"),
+              const SizedBox(height: 40),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  CustomInput(
+                      labelText: "Firstname",
+                      obscureText: false,
+                      textInputType: TextInputType.text,
+                      isNumeric: false,
+                      readOnly: false,
+                      bottomMargin: 20.0,
+                      validator: null,
+                      controller: firstnameCtlr),
+                  CustomInput(
+                      labelText: "Lastname",
+                      obscureText: false,
+                      textInputType: TextInputType.text,
+                      isNumeric: false,
+                      readOnly: false,
+                      bottomMargin: 20.0,
+                      validator: null,
+                      controller: firstnameCtlr),
                   CustomInput(
                       labelText: "Email",
                       obscureText: false,
@@ -72,19 +85,11 @@ class _SignupPageState extends State<SignupPage> {
                       bottomMargin: 20.0,
                       validator: null,
                       controller: passwordCtlr),
-                  CustomInput(
-                      labelText: "Phone",
-                      obscureText: false,
-                      textInputType: TextInputType.text,
-                      isNumeric: true,
-                      readOnly: false,
-                      bottomMargin: 20.0,
-                      validator: null,
-                      controller: phoneCtlr),
                   SizedBox(height: customSize / 10),
                   CustomButton(
                       title: "Create Account",
-                      onPress: () => Navigator.popAndPushNamed(context, "/home"),
+                      onPress: () =>
+                          Navigator.popAndPushNamed(context, "/home"),
                       color: AppColors.primary),
                 ],
               ),
