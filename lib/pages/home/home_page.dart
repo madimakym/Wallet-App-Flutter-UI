@@ -16,14 +16,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late List _transactions = [];
-  String balance = "Solde";
-
-  Future<String> loadJsonData() async {
-    var transactionsJson =
-        await rootBundle.loadString('lib/assets/json/transactions.json');
-    setState(() => {_transactions = json.decode(transactionsJson)});
-    return 'success';
-  }
 
   @override
   void initState() {
@@ -73,11 +65,12 @@ class _HomePageState extends State<HomePage> {
             Container(
               padding:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
-              child: CardItem(
+              child: cardItem(
                 name: "MAKY MADI",
                 balance: "\$ 150566330",
                 cardCode: "9432",
                 icon: "lib/assets/img/icons8-visa.png",
+                context: context,
               ),
             ),
             const SizedBox(height: 20),
@@ -100,22 +93,22 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ServiceItem(
+                  serviceItem(
                     title: "Wallet",
                     icon: "lib/assets/img/icons8-wallet.png",
                     color: const Color(0xFFE3FBFF),
                   ),
-                  ServiceItem(
+                  serviceItem(
                     title: "Transfer",
                     icon: "lib/assets/img/icons8-get_cash.png",
                     color: const Color(0xFFE3FBFF),
                   ),
-                  ServiceItem(
+                  serviceItem(
                     title: "Pay Bills",
                     icon: "lib/assets/img/icons8-cash_on_delivery.png",
                     color: const Color(0xFFE3FBFF),
                   ),
-                  ServiceItem(
+                  serviceItem(
                     title: "Pay",
                     icon: "lib/assets/img/icons8-euro_money.png",
                     color: const Color(0xFFE3FBFF),
@@ -159,5 +152,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  Future<String> loadJsonData() async {
+    var transactionsJson =
+        await rootBundle.loadString('lib/assets/json/transactions.json');
+    setState(() => {_transactions = json.decode(transactionsJson)});
+    return 'success';
   }
 }

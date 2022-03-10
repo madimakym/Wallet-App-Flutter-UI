@@ -23,9 +23,17 @@ class TransactionItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-          backgroundColor: AppColors.white,
-          child: Image.asset("lib/assets/img/$icon")),
+      leading: SizedBox(
+        width: 40,
+        height: 40,
+        child: CircleAvatar(
+          backgroundColor:AppColors.bg,
+          child: ClipRRect(
+            child: Image.asset("lib/assets/img/$icon"),
+            borderRadius: BorderRadius.circular(50.0),
+          ),
+        ),
+      ),
       title: Text(title, style: const TextStyle(fontWeight: FontWeight.w500)),
       subtitle: Text(subTitle,
           style: const TextStyle(
