@@ -1,16 +1,22 @@
-# wallet_app
+# Wallet App - Flutter UI
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Development Setup
+Clone the repository and run the following commands:
+```
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+## ScreenShots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src="screenshot/1.png" height="500em" />&nbsp;<img src="screenshot/2.png" height="500em" />&nbsp;<img src="screenshot/3.png" height="500em" />&nbsp;<img src="screenshot/4.png" height="500em" />
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<img src="screenshot/5.png" height="500em" />&nbsp;<img src="screenshot/6.png" height="500em" />&nbsp;<img src="screenshot/7.png" height="500em" />&nbsp;<img src="screenshot/8.png" height="500em" />
+
+
+<img src="screenshot/9.png" height="500em" />&nbsp;<img src="screenshot/10.png" height="500em" />&nbsp;<img src="screenshot/11.png" height="500em" />

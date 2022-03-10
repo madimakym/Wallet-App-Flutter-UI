@@ -5,7 +5,6 @@ import 'package:wallet_app/pages/auth/welcome_page.dart';
 import 'package:wallet_app/pages/home/home_page.dart';
 import 'package:wallet_app/pages/transaction/transaction_page.dart';
 import 'package:wallet_app/pages/tabbar.dart';
-
 import 'pages/card/card_page.dart';
 import 'pages/settings/profile/profile_page.dart';
 import 'widgets/transition.dart';
@@ -30,6 +29,7 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const WelcomePage(),
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
@@ -44,11 +44,9 @@ class _AppViewState extends State<AppView> {
           case "/card":
             return FadeTransitionRoute(widget: const CardPage());
           case "/transactions":
-               return MaterialPageRoute(
-              builder: (context) {
-                return const TransactionPage();
-              },
-            );
+            return MaterialPageRoute(builder: (context) {
+              return const TransactionPage();
+            });
           case "/profile":
             return FadeTransitionRoute(widget: const ProfilePage());
           default:

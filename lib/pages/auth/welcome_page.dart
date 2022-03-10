@@ -22,8 +22,6 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("eWallet",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
             SizedBox(height: customSize / 5),
             Lottie.asset('lib/assets/img/icon-welcome.json'),
             SizedBox(height: customSize / 12),
